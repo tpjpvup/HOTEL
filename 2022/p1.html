@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6cb661ae9a.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+            font-family: 'poppins';
+        }
+
+        .tabs{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 300px;
+            background-color: #f5f5f5;
+            padding: 20px 30px;
+            overflow: hidden;
+            border-radius: 36px;
+            box-shadow: 5px 10px 5px #ccc;
+        }
+
+        .tabs .tab-header{
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tabs .tab-header > div{
+            width: calc(100%/4);
+            text-align: center;
+            color: #888;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+            outline: none;
+        }
+
+        .tabs .tab-header > div >i{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .tabs .tab-header >div.active{
+            color: #00acee;
+        }
+
+        .tabs .tab-indicator{
+            position: relative;
+            left: 0;
+            width: calc(100%/4);
+            height: 5px;
+            background-color: #00acee;
+            border-radius: 5px;
+            transition: all 500ms ease-in-out;
+        }
+
+        .tabs .tab-body{
+            position: relative; 
+            height: calc(100% - 60px);
+            padding: 10px 5px;
+        }
+
+        .tabs .tab-body > div{
+            position: absolute;
+            top: -200%;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 500ms ease-in-out 0ms,
+                transform 500ms ease-in-out 0ms;
+        }
+
+        .tabs .tab-body > div.active{
+            top:0px;
+            opacity: 1;
+            transform: scale(1);
+
+        }
+
+
+
+    </style>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-header">
+            <div class="active">
+                <i class="fa fa-code"></i> code
+            </div>
+            <div>
+                <i class="fa fa-pencil-square-o"></i>about
+            </div>
+            <div>
+                <i class="fa fa-bar-chart"></i>services
+            </div>
+            <div>
+                <i class="fa fa-envelope-o"></i>contact
+            </div>
+        </div>
+        <div class="tab-indicator"></div>
+        <div class="tab-body">
+            <div class="active">
+                <h2>code section</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit natus doloremque aut sequi, beatae in debitis odit ullam atque repellendus reiciendis nostrum! Doloremque consectetur necessitatibus quia ab hic dignissimos provident?</p>
+            </div>
+            <div>
+                <h2>about section</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo inventore aut nam veritatis. In, ut exercitationem natus eligendi fuga, perferendis cupiditate iste impedit consequuntur debitis saepe reiciendis totam itaque obcaecati.</p>
+            </div>
+            <div>
+                <h2>services section</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo inventore aut nam veritatis. In, ut exercitationem natus eligendi fuga, perferendis cupiditate iste impedit consequuntur debitis saepe reiciendis totam itaque obcaecati.</p>
+            </div>
+            <div>
+                <h2>contact section</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo inventore aut nam veritatis. In, ut exercitationem natus eligendi fuga, perferendis cupiditate iste impedit consequuntur debitis saepe reiciendis totam itaque obcaecati.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/tab.js"></script>
+</html>
